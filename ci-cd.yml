@@ -1,0 +1,27 @@
+
+nome:Pipeline CI
+
+sobre:
+  empurrar:
+    galhos:
+      -principal
+    despacho de fluxo de trabalho:
+
+    empregos:
+      construir e testar:
+        continua:ubuntu-latest
+
+        passos:
+         -nome:Baixar o código
+           usa:ações/finalizar compra@v4
+
+           -nome:Configurar Node.js
+             usa:ações/configurar-nó@v4
+             com:
+               versão do nó: '20'
+
+          -nome:Instalar dependências 
+            correr:npm install
+
+          -nome:Teste do Executor
+            correr:teste npm
